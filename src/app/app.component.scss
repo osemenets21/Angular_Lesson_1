@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --gray: rgb(155, 155, 155, 0.2);
+}
+
+body,
+html {
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+header {
+    width: 99vw;
+    height: 50px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    background: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        color: rgb(64, 64, 64);
+        font-size: 30px;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .bad-words-container {
+        margin-top: 100px;
+        width: 50%;
+        height: 315px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 1px 2px rgba(179, 179, 179, 0.5);
+        background-color: rgba(220, 220, 220, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px;
+
+        .bad-words-header {
+            width: 100%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            span {
+                font-weight: bold;
+                font-size: 18px;
+                white-space: nowrap;
+                margin-right: 2px;
+
+            }
+
+            .words {
+                overflow: hidden;
+                white-space: nowrap;
+                font-size: 19px;
+            }
+
+        }
+
+        
+
+        .bad-words-editing {
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            .input-new-word {
+                width: 65%;
+                height: 28px;
+            }
+
+            .btn-add {
+                width: 15%;
+                height: 28px;
+                background: rgb(251, 240, 36);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                &:hover {
+                    background: rgb(255, 183, 40);
+                    color: white;
+                }
+            }
+
+            .btn-reset {
+                width: 15%;
+                height: 28px;
+                background: rgb(177, 0, 0);
+                border: none;
+                border-radius: 5px;
+                color: white;
+                cursor: pointer;
+                &:hover {
+                    background: red;
+                    color: black;
+                }
+            }
+
+        }
+
+        .textarea {
+            width: 100%;
+            height: 176px;
+            resize: none;
+        }
+
+        
+        .btn-cenzor {
+            width: 100%;
+            height: 28px;
+            background-color: rgb(0, 211, 0);
+            border-radius: 5px;
+            border: none;
+            color: black;
+            font-size: 19px;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(0, 133, 0);
+                color: white;
+                transition: background-color .2s;
+            }
+        }
+
+    }
+}
